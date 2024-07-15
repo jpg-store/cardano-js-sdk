@@ -1,0 +1,14 @@
+{
+  "extends": "../../../tsconfig.esm.json",
+  "compilerOptions": {
+    "outDir": "../dist/esm"
+  },
+  "references": [
+    {
+      "path": "../../util/src"
+    },
+    {
+      "path": "../../crypto/src"
+    }
+  ]
+}

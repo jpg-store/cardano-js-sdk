@@ -1,0 +1,26 @@
+{
+  "extends": "../../../tsconfig.esm.json",
+  "compilerOptions": {
+    "outDir": "../dist/esm"
+  },
+  "references": [
+    {
+      "path": "../../dapp-connector/src"
+    },
+    {
+      "path": "../../core/src"
+    },
+    {
+      "path": "../../key-management/src"
+    },
+    {
+      "path": "../../wallet/src"
+    },
+    {
+      "path": "../../util-rxjs/src"
+    },
+    {
+      "path": "../../util/src"
+    }
+  ]
+}

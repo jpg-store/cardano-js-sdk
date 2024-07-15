@@ -1,0 +1,38 @@
+{
+  "extends": "../../../tsconfig.esm.json",
+  "compilerOptions": {
+    "outDir": "../dist/esm"
+  },
+  "references": [
+    {
+      "path": "../../input-selection/src"
+    },
+    {
+      "path": "../../dapp-connector/src"
+    },
+    {
+      "path": "../../core/src"
+    },
+    {
+      "path": "../../crypto/src"
+    },
+    {
+      "path": "../../key-management/src"
+    },
+    {
+      "path": "../../util-rxjs/src"
+    },
+    {
+      "path": "../../util/src"
+    },
+    {
+      "path": "../../tx-construction/src"
+    },
+    {
+      "path": "../../hardware-ledger/src"
+    },
+    {
+      "path": "../../hardware-trezor/src"
+    }
+  ]
+}
