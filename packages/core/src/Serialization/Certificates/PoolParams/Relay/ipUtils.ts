@@ -1,6 +1,8 @@
 /* eslint-disable no-bitwise */
-import { Address4, Address6 } from 'ip-address';
+import IpAddress from 'ip-address';
 import { InvalidArgumentError } from '@cardano-sdk/util';
+
+const { Address4, Address6 } = IpAddress;
 
 /**
  * Converts a IPv4 string to its byte array representation.

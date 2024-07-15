@@ -3,7 +3,9 @@ import { Ed25519PrivateExtendedKeyHex, Ed25519PrivateNormalKeyHex } from '../hex
 import { Ed25519PublicKey } from './Ed25519PublicKey';
 import { Ed25519Signature } from './Ed25519Signature';
 import { HexBlob, InvalidArgumentError } from '@cardano-sdk/util';
-import {
+import lws from 'libsodium-wrappers-sumo';
+
+const {
   crypto_core_ed25519_scalar_add,
   crypto_core_ed25519_scalar_mul,
   crypto_core_ed25519_scalar_reduce,
@@ -12,7 +14,7 @@ import {
   crypto_sign_detached,
   crypto_sign_seed_keypair,
   ready
-} from 'libsodium-wrappers-sumo';
+} = lws;
 
 const SCALAR_INDEX = 0;
 const SCALAR_SIZE = 32;

@@ -2,11 +2,13 @@
 /* eslint-disable unicorn/number-literal-case */
 import { InvalidArgumentError } from '@cardano-sdk/util';
 import { add256bits, add28Mul8 } from './arithmetic';
-import {
+import lws from 'libsodium-wrappers-sumo';
+
+const {
   crypto_auth_hmacsha512,
   crypto_core_ed25519_add,
   crypto_scalarmult_ed25519_base_noclamp
-} from 'libsodium-wrappers-sumo';
+} = lws;
 
 /**
  * Check if the index is hardened.

@@ -4,8 +4,10 @@ import { Bip32PrivateKeyHex } from '../hexTypes';
 import { Bip32PublicKey } from './Bip32PublicKey';
 import { EXTENDED_ED25519_PRIVATE_KEY_LENGTH, Ed25519PrivateKey } from '../Ed25519e';
 import { InvalidArgumentError } from '@cardano-sdk/util';
-import { crypto_scalarmult_ed25519_base_noclamp, ready } from 'libsodium-wrappers-sumo';
+import lws from 'libsodium-wrappers-sumo';
 import { pbkdf2Sync } from 'pbkdf2';
+
+const { crypto_scalarmult_ed25519_base_noclamp, ready } = lws;
 
 const SCALAR_INDEX = 0;
 const SCALAR_SIZE = 32;
