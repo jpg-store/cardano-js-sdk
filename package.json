@@ -10,8 +10,8 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "tsc -b tsconfig.esm.build.json && yarn workspaces foreach -v run build",
-    "build:cjs": "tsc -b tsconfig.cjs.build.json && yarn workspaces foreach -v run build:cjs",
+    "build": "yarn workspaces foreach -v run build",
+    "build:cjs": "yarn workspaces foreach -v run build:cjs",
     "circular-deps:check": "yarn workspaces foreach -v run circular-deps:check",
     "cleanup-build": "yarn workspaces foreach -v run cleanup && yarn install && yarn workspaces foreach -v run build",
     "reinstall": "yarn workspaces foreach -v run cleanup:nm && yarn install",
@@ -87,6 +87,7 @@
     "ts-node": "^10.9.2",
     "ts-node-dev": "^1.1.8",
     "tsc-alias": "^1.8.10",
+    "tshy": "^3.0.2",
     "tsx": "^4.16.2",
     "typedoc": "^0.26.4",
     "typedoc-plugin-missing-exports": "^3.0.0",
