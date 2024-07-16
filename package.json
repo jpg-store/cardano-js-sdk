@@ -7,11 +7,9 @@
     "node": ">=16.20.2"
   },
   "workspaces": [
-    "packages/*"
+    "src/*"
   ],
   "scripts": {
-    "build": "yarn workspaces foreach -v run build",
-    "build:cjs": "yarn workspaces foreach -v run build:cjs",
     "circular-deps:check": "yarn workspaces foreach -v run circular-deps:check",
     "cleanup-build": "yarn workspaces foreach -v run cleanup && yarn install && yarn workspaces foreach -v run build",
     "reinstall": "yarn workspaces foreach -v run cleanup:nm && yarn install",

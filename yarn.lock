@@ -3090,9 +3090,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cardano-sdk/cardano-services-client@workspace:packages/cardano-services-client, @cardano-sdk/cardano-services-client@workspace:~":
+"@cardano-sdk/cardano-services-client@workspace:src/cardano-services-client, @cardano-sdk/cardano-services-client@workspace:~":
   version: 0.0.0-use.local
-  resolution: "@cardano-sdk/cardano-services-client@workspace:packages/cardano-services-client"
+  resolution: "@cardano-sdk/cardano-services-client@workspace:src/cardano-services-client"
   dependencies:
     "@cardano-sdk/core": "workspace:~"
     "@cardano-sdk/util": "workspace:~"
@@ -3109,9 +3109,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@cardano-sdk/cardano-services@workspace:packages/cardano-services, @cardano-sdk/cardano-services@workspace:~":
+"@cardano-sdk/cardano-services@workspace:src/cardano-services, @cardano-sdk/cardano-services@workspace:~":
   version: 0.0.0-use.local
-  resolution: "@cardano-sdk/cardano-services@workspace:packages/cardano-services"
+  resolution: "@cardano-sdk/cardano-services@workspace:src/cardano-services"
   dependencies:
     "@blockfrost/blockfrost-js": 5.5.0-beta.0
     "@cardano-ogmios/client": 6.3.0
@@ -3179,9 +3179,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@cardano-sdk/core@workspace:packages/core, @cardano-sdk/core@workspace:~":
+"@cardano-sdk/core@workspace:src/core, @cardano-sdk/core@workspace:~":
   version: 0.0.0-use.local
-  resolution: "@cardano-sdk/core@workspace:packages/core"
+  resolution: "@cardano-sdk/core@workspace:src/core"
   dependencies:
     "@cardano-ogmios/client": 6.3.0
     "@cardano-ogmios/schema": 6.3.0
@@ -3207,9 +3207,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@cardano-sdk/crypto@workspace:packages/crypto, @cardano-sdk/crypto@workspace:~":
+"@cardano-sdk/crypto@workspace:src/crypto, @cardano-sdk/crypto@workspace:~":
   version: 0.0.0-use.local
-  resolution: "@cardano-sdk/crypto@workspace:packages/crypto"
+  resolution: "@cardano-sdk/crypto@workspace:src/crypto"
   dependencies:
     "@cardano-ogmios/schema": 6.3.0
     "@cardano-sdk/util": "workspace:~"
@@ -3238,9 +3238,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@cardano-sdk/dapp-connector@workspace:packages/dapp-connector, @cardano-sdk/dapp-connector@workspace:~":
+"@cardano-sdk/dapp-connector@workspace:src/dapp-connector, @cardano-sdk/dapp-connector@workspace:~":
   version: 0.0.0-use.local
-  resolution: "@cardano-sdk/dapp-connector@workspace:packages/dapp-connector"
+  resolution: "@cardano-sdk/dapp-connector@workspace:src/dapp-connector"
   dependencies:
     "@cardano-sdk/core": "workspace:~"
     "@cardano-sdk/crypto": "workspace:~"
@@ -3256,9 +3256,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@cardano-sdk/e2e@workspace:packages/e2e":
+"@cardano-sdk/e2e@workspace:src/e2e":
   version: 0.0.0-use.local
-  resolution: "@cardano-sdk/e2e@workspace:packages/e2e"
+  resolution: "@cardano-sdk/e2e@workspace:src/e2e"
   dependencies:
     "@babel/core": ^7.18.2
     "@babel/preset-env": ^7.18.2
@@ -3355,9 +3355,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@cardano-sdk/golden-test-generator@workspace:packages/golden-test-generator":
+"@cardano-sdk/golden-test-generator@workspace:src/golden-test-generator":
   version: 0.0.0-use.local
-  resolution: "@cardano-sdk/golden-test-generator@workspace:packages/golden-test-generator"
+  resolution: "@cardano-sdk/golden-test-generator@workspace:src/golden-test-generator"
   dependencies:
     "@cardano-sdk/core": "workspace:~"
     "@cardano-sdk/ogmios": "workspace:~"
@@ -3384,9 +3384,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@cardano-sdk/governance@workspace:packages/governance":
+"@cardano-sdk/governance@workspace:src/governance":
   version: 0.0.0-use.local
-  resolution: "@cardano-sdk/governance@workspace:packages/governance"
+  resolution: "@cardano-sdk/governance@workspace:src/governance"
   dependencies:
     "@cardano-sdk/core": "workspace:~"
     "@cardano-sdk/crypto": "workspace:~"
@@ -3398,9 +3398,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@cardano-sdk/hardware-ledger@workspace:packages/hardware-ledger, @cardano-sdk/hardware-ledger@workspace:~":
+"@cardano-sdk/hardware-ledger@workspace:src/hardware-ledger, @cardano-sdk/hardware-ledger@workspace:~":
   version: 0.0.0-use.local
-  resolution: "@cardano-sdk/hardware-ledger@workspace:packages/hardware-ledger"
+  resolution: "@cardano-sdk/hardware-ledger@workspace:src/hardware-ledger"
   dependencies:
     "@cardano-foundation/ledgerjs-hw-app-cardano": ^7.1.2
     "@cardano-sdk/core": "workspace:~"
@@ -3420,9 +3420,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@cardano-sdk/hardware-trezor@workspace:packages/hardware-trezor, @cardano-sdk/hardware-trezor@workspace:~":
+"@cardano-sdk/hardware-trezor@workspace:src/hardware-trezor, @cardano-sdk/hardware-trezor@workspace:~":
   version: 0.0.0-use.local
-  resolution: "@cardano-sdk/hardware-trezor@workspace:packages/hardware-trezor"
+  resolution: "@cardano-sdk/hardware-trezor@workspace:src/hardware-trezor"
   dependencies:
     "@cardano-sdk/core": "workspace:~"
     "@cardano-sdk/crypto": "workspace:~"
@@ -3439,9 +3439,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@cardano-sdk/input-selection@workspace:packages/input-selection, @cardano-sdk/input-selection@workspace:~":
+"@cardano-sdk/input-selection@workspace:src/input-selection, @cardano-sdk/input-selection@workspace:~":
   version: 0.0.0-use.local
-  resolution: "@cardano-sdk/input-selection@workspace:packages/input-selection"
+  resolution: "@cardano-sdk/input-selection@workspace:src/input-selection"
   dependencies:
     "@cardano-sdk/core": "workspace:~"
     "@cardano-sdk/key-management": "workspace:~"
@@ -3456,9 +3456,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@cardano-sdk/key-management@workspace:packages/key-management, @cardano-sdk/key-management@workspace:~":
+"@cardano-sdk/key-management@workspace:src/key-management, @cardano-sdk/key-management@workspace:~":
   version: 0.0.0-use.local
-  resolution: "@cardano-sdk/key-management@workspace:packages/key-management"
+  resolution: "@cardano-sdk/key-management@workspace:src/key-management"
   dependencies:
     "@cardano-sdk/core": "workspace:~"
     "@cardano-sdk/crypto": "workspace:~"
@@ -3480,9 +3480,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@cardano-sdk/ogmios@workspace:packages/ogmios, @cardano-sdk/ogmios@workspace:~":
+"@cardano-sdk/ogmios@workspace:src/ogmios, @cardano-sdk/ogmios@workspace:~":
   version: 0.0.0-use.local
-  resolution: "@cardano-sdk/ogmios@workspace:packages/ogmios"
+  resolution: "@cardano-sdk/ogmios@workspace:src/ogmios"
   dependencies:
     "@cardano-ogmios/client": 6.3.0
     "@cardano-ogmios/schema": 6.3.0
@@ -3507,9 +3507,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@cardano-sdk/projection-typeorm@workspace:packages/projection-typeorm, @cardano-sdk/projection-typeorm@workspace:~":
+"@cardano-sdk/projection-typeorm@workspace:src/projection-typeorm, @cardano-sdk/projection-typeorm@workspace:~":
   version: 0.0.0-use.local
-  resolution: "@cardano-sdk/projection-typeorm@workspace:packages/projection-typeorm"
+  resolution: "@cardano-sdk/projection-typeorm@workspace:src/projection-typeorm"
   dependencies:
     "@cardano-sdk/core": "workspace:~"
     "@cardano-sdk/crypto": "workspace:~"
@@ -3530,9 +3530,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@cardano-sdk/projection@workspace:packages/projection, @cardano-sdk/projection@workspace:~":
+"@cardano-sdk/projection@workspace:src/projection, @cardano-sdk/projection@workspace:~":
   version: 0.0.0-use.local
-  resolution: "@cardano-sdk/projection@workspace:packages/projection"
+  resolution: "@cardano-sdk/projection@workspace:src/projection"
   dependencies:
     "@cardano-sdk/core": "workspace:~"
     "@cardano-sdk/crypto": "workspace:~"
@@ -3549,9 +3549,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@cardano-sdk/tx-construction@workspace:packages/tx-construction, @cardano-sdk/tx-construction@workspace:~":
+"@cardano-sdk/tx-construction@workspace:src/tx-construction, @cardano-sdk/tx-construction@workspace:~":
   version: 0.0.0-use.local
-  resolution: "@cardano-sdk/tx-construction@workspace:packages/tx-construction"
+  resolution: "@cardano-sdk/tx-construction@workspace:src/tx-construction"
   dependencies:
     "@cardano-sdk/core": "workspace:~"
     "@cardano-sdk/crypto": "workspace:~"
@@ -3570,9 +3570,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@cardano-sdk/util-dev@workspace:packages/util-dev, @cardano-sdk/util-dev@workspace:~":
+"@cardano-sdk/util-dev@workspace:src/util-dev, @cardano-sdk/util-dev@workspace:~":
   version: 0.0.0-use.local
-  resolution: "@cardano-sdk/util-dev@workspace:packages/util-dev"
+  resolution: "@cardano-sdk/util-dev@workspace:src/util-dev"
   dependencies:
     "@cardano-sdk/core": "workspace:~"
     "@cardano-sdk/crypto": "workspace:~"
@@ -3594,9 +3594,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@cardano-sdk/util-rxjs@workspace:packages/util-rxjs, @cardano-sdk/util-rxjs@workspace:~":
+"@cardano-sdk/util-rxjs@workspace:src/util-rxjs, @cardano-sdk/util-rxjs@workspace:~":
   version: 0.0.0-use.local
-  resolution: "@cardano-sdk/util-rxjs@workspace:packages/util-rxjs"
+  resolution: "@cardano-sdk/util-rxjs@workspace:src/util-rxjs"
   dependencies:
     "@cardano-sdk/util": "workspace:~"
     "@cardano-sdk/util-dev": "workspace:~"
@@ -3606,9 +3606,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@cardano-sdk/util@workspace:packages/util, @cardano-sdk/util@workspace:~":
+"@cardano-sdk/util@workspace:src/util, @cardano-sdk/util@workspace:~":
   version: 0.0.0-use.local
-  resolution: "@cardano-sdk/util@workspace:packages/util"
+  resolution: "@cardano-sdk/util@workspace:src/util"
   dependencies:
     "@types/lodash": ^4.14.182
     bech32: ^2.0.0
@@ -3621,9 +3621,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@cardano-sdk/wallet@workspace:packages/wallet, @cardano-sdk/wallet@workspace:~":
+"@cardano-sdk/wallet@workspace:src/wallet, @cardano-sdk/wallet@workspace:~":
   version: 0.0.0-use.local
-  resolution: "@cardano-sdk/wallet@workspace:packages/wallet"
+  resolution: "@cardano-sdk/wallet@workspace:src/wallet"
   dependencies:
     "@cardano-foundation/ledgerjs-hw-app-cardano": ^7.1.2
     "@cardano-ogmios/client": 6.3.0
@@ -3662,9 +3662,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@cardano-sdk/web-extension@workspace:packages/web-extension, @cardano-sdk/web-extension@workspace:~":
+"@cardano-sdk/web-extension@workspace:src/web-extension, @cardano-sdk/web-extension@workspace:~":
   version: 0.0.0-use.local
-  resolution: "@cardano-sdk/web-extension@workspace:packages/web-extension"
+  resolution: "@cardano-sdk/web-extension@workspace:src/web-extension"
   dependencies:
     "@cardano-sdk/core": "workspace:~"
     "@cardano-sdk/crypto": "workspace:~"
