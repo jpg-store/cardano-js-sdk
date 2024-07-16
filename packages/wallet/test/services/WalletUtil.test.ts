@@ -17,7 +17,6 @@ import {
   requiresForeignSignatures
 } from '../../src';
 import { Cardano, ChainHistoryProvider } from '@cardano-sdk/core';
-import { DrepScriptHashVoter } from '@cardano-sdk/core/dist/cjs/Cardano';
 import { createAsyncKeyAgent, signTx, toSignedTx, waitForWalletStateSettle } from '../util';
 import { createStubStakePoolProvider, mockProviders as mocks } from '@cardano-sdk/util-dev';
 import { dummyLogger as logger } from 'ts-log';
@@ -1377,7 +1376,7 @@ describe('WalletUtil', () => {
             voter: {
               __typename: Cardano.VoterType.dRepScriptHash,
               credential: scriptCredential
-            } as DrepScriptHashVoter,
+            } as Cardano.DrepScriptHashVoter,
             votes: []
           }
         ];

@@ -15,7 +15,6 @@ import { Bootstrap, Mappers, ProjectionEvent, requestNext } from '@cardano-sdk/p
 import { ChainSyncDataSet, chainSyncData, logger } from '@cardano-sdk/util-dev';
 import { ChainSyncEventType } from '@cardano-sdk/core';
 import { Observable, filter, of } from 'rxjs';
-import { PoolUpdate } from '@cardano-sdk/projection/dist/cjs/operators/Mappers';
 import { QueryRunner } from 'typeorm';
 import { StakePoolMetadataJob, createPgBoss } from '../../src/pgBoss';
 import { connectionConfig, initializeDataSource } from '../util';
@@ -150,7 +149,7 @@ describe('willStoreStakePoolMetadataJob', () => {
       willStoreStakePoolMetadataJob({
         stakePools: {
           retirements: [],
-          updates: [{} as PoolUpdate]
+          updates: [{} as Mappers.PoolUpdate]
         }
       })
     ).toBeTruthy();

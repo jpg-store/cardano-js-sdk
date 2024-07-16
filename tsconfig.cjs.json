@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "module": "CommonJS",
+    "target": "es2021",
+    "outDir": "${configDir}/dist/cjs",
+    "moduleResolution": "Node10",
+  },
+  "exclude": [
+    "./test",
+    "./packages/**/test",
+    "./packages/**/*.test.ts",
+    "./packages/**/*.spec.ts",
+  ]
+}

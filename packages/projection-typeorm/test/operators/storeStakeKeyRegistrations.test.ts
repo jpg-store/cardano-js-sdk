@@ -16,7 +16,6 @@ import { Bootstrap, Mappers, ProjectionEvent, requestNext } from '@cardano-sdk/p
 import { ChainSyncDataSet, chainSyncData, logger } from '@cardano-sdk/util-dev';
 import { DataSource, QueryRunner, Repository } from 'typeorm';
 import { Observable, firstValueFrom, pairwise, takeWhile } from 'rxjs';
-import { StakeKeyRegistration } from '@cardano-sdk/projection/dist/cjs/operators/Mappers';
 import { connectionConfig$, initializeDataSource } from '../util';
 import {
   createProjectorContext,
@@ -100,7 +99,7 @@ describe('willStoreStakeKeyRegistrations', () => {
   it('returns true if stakeKeyRegistrations are bigger than 1', () => {
     expect(
       willStoreStakeKeyRegistrations({
-        stakeKeyRegistrations: [{} as StakeKeyRegistration]
+        stakeKeyRegistrations: [{} as Mappers.StakeKeyRegistration]
       })
     ).toBeTruthy();
   });

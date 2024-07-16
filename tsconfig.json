@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
-    "composite": true,
-    "module": "commonjs",
-    "target": "es2021",
+    "composite": false,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "moduleResolution": "node",
+    "resolveJsonModule": true,
     "declaration": true,
+    "allowJs": false,
+    "checkJs": false,
     "declarationMap": true,
     "noEmitOnError": true,
     "noUnusedParameters": true,
@@ -14,12 +14,39 @@
     "removeComments": true,
     "preserveConstEnums": true,
     "sourceMap": true,
+    "disableSourceOfProjectReferenceRedirect": true,
     "strict": true,
     "strictPropertyInitialization": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "paths": {
+      "@cardano-sdk/*": ["./packages/*/src"],
+    }
   },
+  "references": [
+    { "path": "./packages/cardano-services" },
+    { "path": "./packages/cardano-services-client" },
+    { "path": "./packages/core" },
+    { "path": "./packages/crypto" },
+    { "path": "./packages/dapp-connector" },
+    { "path": "./packages/e2e" },
+    { "path": "./packages/golden-test-generator" },
+    { "path": "./packages/governance" },
+    { "path": "./packages/hardware-ledger" },
+    { "path": "./packages/hardware-trezor" },
+    { "path": "./packages/input-selection" },
+    { "path": "./packages/key-management" },
+    { "path": "./packages/ogmios" },
+    { "path": "./packages/projection" },
+    { "path": "./packages/projection-typeorm" },
+    { "path": "./packages/tx-construction" },
+    { "path": "./packages/util" },
+    { "path": "./packages/util-dev" },
+    { "path": "./packages/util-rxjs" },
+    { "path": "./packages/wallet" },
+    { "path": "./packages/web-extension" }
+  ],
   "tsc-alias": {
     "resolveFullPaths": true,
     "verbose": false

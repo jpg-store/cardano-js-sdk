@@ -1,4 +1,3 @@
-import { Address } from '@cardano-sdk/projection/dist/cjs/operators/Mappers';
 import {
   AddressEntity,
   AssetEntity,
@@ -202,7 +201,7 @@ describe('willStoreAddresses', () => {
   it('returns true if address are bigger than 1', () => {
     expect(
       willStoreAddresses({
-        addresses: [{} as Address]
+        addresses: [{} as Mappers.Address]
       })
     ).toBeTruthy();
   });

@@ -20,7 +20,6 @@ import {
 import { Bootstrap, Mappers, ProjectionEvent, requestNext } from '@cardano-sdk/projection';
 import { Cardano, ObservableCardanoNode } from '@cardano-sdk/core';
 import { ChainSyncDataSet, chainSyncData, logger } from '@cardano-sdk/util-dev';
-import { HandleMetadata } from '@cardano-sdk/projection/dist/cjs/operators/Mappers';
 import { Observable, firstValueFrom } from 'rxjs';
 import { QueryRunner, Repository } from 'typeorm';
 import { connectionConfig$, initializeDataSource } from '../util';
@@ -151,7 +150,7 @@ describe('willStoreHandleMetadata', () => {
   it('returns true if handleMetadata are bigger than 1', () => {
     expect(
       willStoreHandleMetadata({
-        handleMetadata: [{} as HandleMetadata]
+        handleMetadata: [{} as Mappers.HandleMetadata]
       })
     ).toBeTruthy();
   });

@@ -19,7 +19,6 @@ import {
   withTypeormTransaction
 } from '../../src';
 import { Bootstrap, Mappers, ProjectionEvent, requestNext } from '@cardano-sdk/projection';
-import { CIP67Asset, ProjectedNftMetadata } from '@cardano-sdk/projection/dist/cjs/operators/Mappers';
 import { ChainSyncDataSet, chainSyncData, generateRandomHexString, logger } from '@cardano-sdk/util-dev';
 import { Observable, firstValueFrom, lastValueFrom, toArray } from 'rxjs';
 import { QueryRunner, Repository } from 'typeorm';
@@ -497,7 +496,7 @@ describe('willStoreNftMetadata', () => {
           byAssetId: {},
           byLabel: {}
         },
-        nftMetadata: [{} as ProjectedNftMetadata]
+        nftMetadata: [{} as Mappers.ProjectedNftMetadata]
       })
     ).toBeTruthy();
   });
@@ -506,8 +505,8 @@ describe('willStoreNftMetadata', () => {
     expect(
       willStoreNftMetadata({
         cip67: {
-          byAssetId: { [{} as Cardano.AssetId]: {} as CIP67Asset },
-          byLabel: { [Asset.AssetNameLabelNum.UserNFT]: [{} as CIP67Asset] }
+          byAssetId: { [{} as Cardano.AssetId]: {} as Mappers.CIP67Asset },
+          byLabel: { [Asset.AssetNameLabelNum.UserNFT]: [{} as Mappers.CIP67Asset] }
         },
         nftMetadata: []
       })

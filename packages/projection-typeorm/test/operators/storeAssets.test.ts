@@ -15,7 +15,6 @@ import {
 import { Bootstrap, Mappers, requestNext } from '@cardano-sdk/projection';
 import { Cardano, ChainSyncEventType } from '@cardano-sdk/core';
 import { ChainSyncDataSet, chainSyncData, logger } from '@cardano-sdk/util-dev';
-import { Mint } from '@cardano-sdk/projection/dist/cjs/operators/Mappers';
 import { QueryRunner } from 'typeorm';
 import { connectionConfig$, initializeDataSource } from '../util';
 import { createProjectorContext, createProjectorTilFirst } from './util';
@@ -116,7 +115,7 @@ describe('willStoreAssets', () => {
   it('returns true if there are mints', () => {
     expect(
       willStoreAssets({
-        mint: [{} as Mint]
+        mint: [{} as Mappers.Mint]
       })
     ).toBeTruthy();
   });

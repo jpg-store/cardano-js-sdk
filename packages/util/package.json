@@ -21,8 +21,8 @@
   "sideEffects": false,
   "license": "Apache-2.0",
   "scripts": {
-    "build": "yarn build:cjs && tsc -p src/tsconfig.json --outDir ./dist/esm --module es2020 && tsc-alias -p src/tsconfig.json --outDir ./dist/esm && cp ../../build/esm-package.json ./dist/esm/package.json",
-    "build:cjs": "tsc --build src && cp ../../build/cjs-package.json ./dist/cjs/package.json",
+    "build": "tsc -p src/tsconfig.esm.json && tsc-alias -p src/tsconfig.esm.json &&  cp ../../build/esm-package.json ./dist/esm/package.json",
+    "build:cjs": "tsc -p src/tsconfig.json && cp ../../build/cjs-package.json ./dist/cjs/package.json",
     "circular-deps:check": "madge --circular dist/cjs",
     "tscNoEmit": "echo typescript --noEmit command not implemented yet",
     "cleanup:dist": "rm -rf dist",
@@ -39,13 +39,7 @@
   },
   "devDependencies": {
     "@types/lodash": "^4.14.182",
-    "eslint": "^7.32.0",
-    "jest": "^28.1.3",
-    "madge": "^5.0.1",
-    "npm-run-all": "^4.1.5",
-    "ts-jest": "^28.0.7",
-    "tsc-alias": "^1.8.10",
-    "typescript": "^4.7.4"
+    "madge": "^5.0.1"
   },
   "dependencies": {
     "bech32": "^2.0.0",

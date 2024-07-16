@@ -3,10 +3,4 @@
   "compilerOptions": {
     "baseUrl": "."
   },
-  "include": ["./**/*.ts"],
-  "references": [
-    {
-      "path": "../src"
-    }
-  ]
 }

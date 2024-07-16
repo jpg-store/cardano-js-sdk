@@ -1,24 +1,3 @@
 {
   "extends": "../../../test/tsconfig.json",
-  "compilerOptions": {
-    "baseUrl": "."
-  },
-  "include": [
-    "./**/*.ts",
-    "../../key-management/test/mocks"
-  ],
-  "references": [
-    {
-      "path": "../src"
-    },
-    {
-      "path": "../../core/src"
-    },
-    {
-      "path": "../../crypto/src"
-    },
-    {
-      "path": "../../key-management/src"
-    }
-  ]
 }
