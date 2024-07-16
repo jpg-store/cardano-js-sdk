@@ -21,8 +21,6 @@
   "sideEffects": false,
   "license": "Apache-2.0",
   "scripts": {
-    "build": "tsc -p ./tsconfig.esm.json && cp ../../build/esm-package.json ./dist/esm/package.json",
-    "build:cjs": "tsc -p src/tsconfig.json && cp ../../build/cjs-package.json ./dist/cjs/package.json",
     "build:test-db": "./test/jest-setup/rebuild-test-db.sh",
     "cleanup:dist": "rm -rf dist",
     "cleanup:nm": "rm -rf node_modules",
@@ -51,7 +49,8 @@
     "test:debug": "DEBUG=true yarn test",
     "test:e2e": "echo 'test:e2e' command not implemented yet",
     "test:load": "jest -c ./load.jest.config.js --runInBand",
-    "tscNoEmit": "echo typescript --noEmit command not implemented yet"
+    "tscNoEmit": "echo typescript --noEmit command not implemented yet",
+    "prepare": "tshy"
   },
   "devDependencies": {
     "@cardano-ogmios/client": "6.3.0",

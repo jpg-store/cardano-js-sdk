@@ -20,8 +20,6 @@
   "sideEffects": false,
   "license": "Apache-2.0",
   "scripts": {
-    "build": "tsc -p ./tsconfig.esm.json &&  cp ../../build/esm-package.json ./dist/esm/package.json",
-    "build:cjs": "tsc -p src/tsconfig.json && cp ../../build/cjs-package.json ./dist/cjs/package.json",
     "circular-deps:check": "madge --circular dist/cjs",
     "tscNoEmit": "echo typescript --noEmit command not implemented yet",
     "cleanup:dist": "rm -rf dist",
@@ -32,6 +30,7 @@
     "test": "jest -c test/jest.config.js",
     "test:build:verify": "tsc --build ./test",
     "test:e2e": "echo 'test:e2e' command not implemented yet",
+    "prepare": "tshy",
     "coverage": "yarn test --coverage || true",
     "prepack": "yarn build"
   },

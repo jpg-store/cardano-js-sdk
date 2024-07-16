@@ -20,8 +20,6 @@
   "sideEffects": false,
   "license": "Apache-2.0",
   "scripts": {
-    "build": "tsc -p ./tsconfig.esm.json &&  cp ../../build/esm-package.json ./dist/esm/package.json",
-    "build:cjs": "tsc -p src/tsconfig.json && cp ../../build/cjs-package.json ./dist/cjs/package.json",
     "circular-deps:check": "madge --circular dist/cjs",
     "tscNoEmit": "echo typescript --noEmit command not implemented yet",
     "cleanup:dist": "rm -rf dist",
@@ -34,6 +32,7 @@
     "test:e2e": "echo 'test:e2e' command not implemented yet",
     "coverage": "echo No coverage report for this package",
     "prepack": "yarn build",
+    "prepare": "tshy",
     "test:debug": "DEBUG=true yarn test"
   },
   "devDependencies": {
