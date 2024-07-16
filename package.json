@@ -91,5 +91,12 @@
     "typedoc-plugin-missing-exports": "^3.0.0",
     "typescript": "5"
   },
+  "tshy": {
+    "exclude": [
+      "src/**/*.test.ts",
+      "src/**/*.spec.ts",
+      "src/**/test/**/*.ts"
+    ]
+  },
   "packageManager": "yarn@3.2.1"
 }
