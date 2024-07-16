@@ -1,0 +1,64 @@
+{
+  "name": "@cardano-sdk/projection-typeorm",
+  "version": "0.8.25",
+  "description": "Project Chain Sync events into PostgreSQL via TypeORM",
+  "engines": {
+    "node": ">=16.20.2"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "exports": {
+    ".": {
+      "development": "./src/index.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
+  "repository": "https://github.com/input-output-hk/cardano-js-sdk",
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false,
+  "license": "Apache-2.0",
+  "scripts": {
+    "tscNoEmit": "echo typescript --noEmit command not implemented yet",
+    "cleanup:dist": "rm -rf dist",
+    "cleanup:nm": "rm -rf node_modules",
+    "cleanup": "rm -rf dist node_modules",
+    "lint": "eslint -c ../../complete.eslintrc.js \"src/**/*.ts\" \"test/**/*.ts\"",
+    "lint:fix": "yarn lint --fix",
+    "test": "jest -c ./jest.config.js --runInBand",
+    "prepare": "tshy",
+    "test:build:verify": "tsc --build ./test",
+    "coverage": "yarn test --coverage || true",
+    "prepack": "yarn build",
+    "test:debug": "DEBUG=true yarn test",
+    "test:e2e": "echo 'test:e2e' command not implemented yet"
+  },
+  "dependencies": {
+    "@cardano-sdk/core": "workspace:~",
+    "@cardano-sdk/crypto": "workspace:~",
+    "@cardano-sdk/projection": "workspace:~",
+    "@cardano-sdk/util": "workspace:~",
+    "@cardano-sdk/util-rxjs": "workspace:~",
+    "backoff-rxjs": "^7.0.0",
+    "lodash": "^4.17.21",
+    "pg": "^8.9.0",
+    "pg-boss": "8.4.2",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.4.0",
+    "ts-log": "^2.2.4",
+    "typeorm": "^0.3.15",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@cardano-sdk/util-dev": "workspace:~",
+    "madge": "^5.0.1"
+  },
+  "files": [
+    "dist/*",
+    "!dist/tsconfig.tsbuildinfo",
+    "LICENSE",
+    "NOTICE"
+  ]
+}

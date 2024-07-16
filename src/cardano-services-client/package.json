@@ -1,0 +1,62 @@
+{
+  "name": "@cardano-sdk/cardano-services-client",
+  "version": "0.19.12",
+  "description": "Cardano Services Client",
+  "engines": {
+    "node": ">=16.20.2"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "exports": {
+    ".": {
+      "development": "./src/index.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
+  "sideEffects": false,
+  "repository": "https://github.com/input-output-hk/cardano-js-sdk",
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "Apache-2.0",
+  "scripts": {
+    "build:version": "bash -c 'if node ./scripts/createVersionSource.js --check ; then node ./scripts/createVersionSource.js --create && yarn lint:fix ; fi'",
+    "tscNoEmit": "echo typescript --noEmit command not implemented yet",
+    "cleanup:dist": "rm -rf dist",
+    "circular-deps:check": "madge --circular dist/cjs",
+    "cleanup:nm": "rm -rf node_modules",
+    "cleanup": "rm -rf dist node_modules",
+    "lint": "eslint -c ../../complete.eslintrc.js \"src/**/*.ts\" \"test/**/*.ts\"",
+    "lint:fix": "yarn lint --fix",
+    "test": "yarn build:version && jest -c ./jest.config.js",
+    "test:build:verify": "tsc --build ./test",
+    "test:e2e": "echo 'test:e2e' command not implemented yet",
+    "coverage": "yarn test --coverage || true",
+    "prepack": "yarn build",
+    "prepare": "tshy",
+    "test:debug": "DEBUG=true yarn test"
+  },
+  "devDependencies": {
+    "@cardano-sdk/util-dev": "workspace:~",
+    "@types/validator": "^13.7.1",
+    "axios-mock-adapter": "^1.20.0",
+    "express": "^4.17.3",
+    "get-port-please": "^2.5.0",
+    "madge": "^5.0.1"
+  },
+  "dependencies": {
+    "@cardano-sdk/core": "workspace:~",
+    "@cardano-sdk/util": "workspace:~",
+    "axios": "^0.28.0",
+    "class-validator": "^0.14.0",
+    "json-bigint": "~1.0.0",
+    "ts-log": "^2.2.4"
+  },
+  "files": [
+    "dist/*",
+    "!dist/tsconfig.tsbuildinfo",
+    "LICENSE",
+    "NOTICE"
+  ]
+}

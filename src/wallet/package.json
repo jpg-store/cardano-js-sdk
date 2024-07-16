@@ -1,0 +1,84 @@
+{
+  "name": "@cardano-sdk/wallet",
+  "version": "0.38.7",
+  "description": "Wallet modules",
+  "engines": {
+    "node": ">=16.20.2"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
+  "repository": "https://github.com/input-output-hk/cardano-js-sdk",
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false,
+  "license": "Apache-2.0",
+  "scripts": {
+    "circular-deps:check": "madge --circular dist/cjs",
+    "tscNoEmit": "echo typescript --noEmit command not implemented yet",
+    "cleanup:dist": "rm -rf dist",
+    "cleanup:nm": "rm -rf node_modules",
+    "cleanup": "rm -rf dist node_modules",
+    "coverage": "yarn test --coverage || true",
+    "lint": "eslint -c ../../complete.eslintrc.js \"src/**/*.ts\" \"test/**/*.ts\"",
+    "lint:fix": "yarn lint --fix",
+    "prepare": "tshy",
+    "prepack": "yarn build",
+    "test": "jest -c ./jest.config.js",
+    "test:build:verify": "tsc --build ./test",
+    "test:hw:ledger": "jest ./test/hardware/ledger/* -c ./hw.jest.config.js --runInBand",
+    "test:hw:trezor": "jest ./test/hardware/trezor/* -c ./hw.jest.config.js --runInBand",
+    "test:debug": "DEBUG=true yarn test",
+    "test:e2e": "echo 'test:e2e' command not implemented yet"
+  },
+  "devDependencies": {
+    "@cardano-foundation/ledgerjs-hw-app-cardano": "^7.1.2",
+    "@cardano-ogmios/client": "6.3.0",
+    "@cardano-sdk/cardano-services-client": "workspace:~",
+    "@cardano-sdk/ogmios": "workspace:~",
+    "@cardano-sdk/util-dev": "workspace:~",
+    "@ledgerhq/hw-transport-node-hid-noevents": "^6.27.12",
+    "@types/node-hid": "^1.3.1",
+    "@types/pouchdb": "^6.4.0",
+    "bunyan": "^1.8.15",
+    "envalid": "^7.3.1",
+    "jest-webextension-mock": "^3.7.19",
+    "madge": "^5.0.1",
+    "mock-browser": "^0.92.14",
+    "wait-on": "^6.0.1",
+    "webextension-polyfill": "^0.9.0"
+  },
+  "dependencies": {
+    "@cardano-sdk/core": "workspace:~",
+    "@cardano-sdk/crypto": "workspace:~",
+    "@cardano-sdk/dapp-connector": "workspace:~",
+    "@cardano-sdk/hardware-ledger": "workspace:~",
+    "@cardano-sdk/hardware-trezor": "workspace:~",
+    "@cardano-sdk/input-selection": "workspace:~",
+    "@cardano-sdk/key-management": "workspace:~",
+    "@cardano-sdk/tx-construction": "workspace:~",
+    "@cardano-sdk/util": "workspace:~",
+    "@cardano-sdk/util-rxjs": "workspace:~",
+    "backoff-rxjs": "^7.0.0",
+    "bignumber.js": "^9.1.1",
+    "delay": "^5.0.0",
+    "emittery": "^0.10.0",
+    "lodash": "^4.17.21",
+    "pouchdb": "^7.3.0",
+    "rxjs": "^7.4.0",
+    "ts-custom-error": "^3.2.0",
+    "ts-log": "^2.2.3"
+  },
+  "files": [
+    "dist/*",
+    "!dist/tsconfig.tsbuildinfo",
+    "LICENSE",
+    "NOTICE"
+  ]
+}

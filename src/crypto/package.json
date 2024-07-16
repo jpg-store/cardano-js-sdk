@@ -1,0 +1,77 @@
+{
+  "name": "@cardano-sdk/crypto",
+  "version": "0.1.26",
+  "description": "Cryptographic types and functions for Cardano. Warning: The libsodium crypto provider has not yet been audited. Use at this stage is at own risk",
+  "engines": {
+    "node": ">=16.20.2"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "exports": {
+    ".": {
+      "development": "./src/index.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
+  "repository": "https://github.com/input-output-hk/cardano-js-sdk",
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false,
+  "license": "Apache-2.0",
+  "scripts": {
+    "circular-deps:check": "madge --circular dist/cjs",
+    "tscNoEmit": "echo typescript --noEmit command not implemented yet",
+    "cleanup:dist": "rm -rf dist",
+    "cleanup:nm": "rm -rf node_modules",
+    "cleanup": "rm -rf dist node_modules",
+    "lint": "eslint -c ../../complete.eslintrc.js \"src/**/*.ts\" \"test/**/*.ts\"",
+    "lint:fix": "yarn lint --fix",
+    "test": "jest -c ./jest.config.js",
+    "test:build:verify": "tsc --build ./test",
+    "test:e2e": "echo 'test:e2e' command not implemented yet",
+    "coverage": "echo No coverage report for this package",
+    "prepare": "tshy",
+    "prepack": "yarn build"
+  },
+  "devDependencies": {
+    "@cardano-ogmios/schema": "6.3.0",
+    "@dcspark/cardano-multiplatform-lib-nodejs": "^3.1.1",
+    "@types/blake2b": "^2.1.0",
+    "@types/libsodium-wrappers-sumo": "^0.7.5",
+    "@types/lodash": "^4.14.182",
+    "madge": "^5.0.1"
+  },
+  "peerDependencies": {
+    "@dcspark/cardano-multiplatform-lib-asmjs": "^3.1.1",
+    "@dcspark/cardano-multiplatform-lib-browser": "^3.1.1",
+    "@dcspark/cardano-multiplatform-lib-nodejs": "^3.1.1"
+  },
+  "peerDependenciesMeta": {
+    "@dcspark/cardano-multiplatform-lib-asmjs": {
+      "optional": true
+    },
+    "@dcspark/cardano-multiplatform-lib-browser": {
+      "optional": true
+    },
+    "@dcspark/cardano-multiplatform-lib-nodejs": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@cardano-sdk/util": "workspace:~",
+    "blake2b": "^2.1.4",
+    "libsodium-wrappers-sumo": "^0.7.5",
+    "lodash": "^4.17.21",
+    "pbkdf2": "^3.1.2",
+    "ts-custom-error": "^3.2.0",
+    "ts-log": "^2.2.4"
+  },
+  "files": [
+    "dist/*",
+    "!dist/tsconfig.tsbuildinfo",
+    "LICENSE",
+    "NOTICE"
+  ]
+}

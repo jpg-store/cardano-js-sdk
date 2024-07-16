@@ -1,0 +1,8 @@
+{
+  "extends": "../../../test/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "commonjs",
+    "noEmitOnError": false
+  },
+}

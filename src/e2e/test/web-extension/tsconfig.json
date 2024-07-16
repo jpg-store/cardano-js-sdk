@@ -1,0 +1,12 @@
+{
+  "extends": "../../../../test/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./extension",
+    "types": [
+      "node",
+      "webdriverio/async",
+      "@wdio/mocha-framework",
+      "expect-webdriverio"
+    ]
+  },
+}

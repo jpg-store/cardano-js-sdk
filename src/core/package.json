@@ -1,0 +1,71 @@
+{
+  "name": "@cardano-sdk/core",
+  "version": "0.35.2",
+  "description": "Core types and libraries for Cardano",
+  "engines": {
+    "node": ">=16.20.2"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "exports": {
+    ".": {
+      "development": "./src/index.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
+  "repository": "https://github.com/input-output-hk/cardano-js-sdk",
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false,
+  "license": "Apache-2.0",
+  "scripts": {
+    "tscNoEmit": "echo typescript --noEmit command not implemented yet",
+    "cleanup:dist": "rm -rf dist",
+    "cleanup:nm": "rm -rf node_modules",
+    "cleanup": "rm -rf dist node_modules",
+    "lint": "eslint -c ../../complete.eslintrc.js \"src/**/*.ts\" \"test/**/*.ts\"",
+    "lint:fix": "yarn lint --fix",
+    "test": "jest -c ./jest.config.js",
+    "test:build:verify": "tsc --build ./test",
+    "test:e2e": "echo 'test:e2e' command not implemented yet",
+    "coverage": "echo No coverage report for this package",
+    "prepare": "tshy",
+    "prepack": "yarn build"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.182",
+    "delay": "^5.0.0",
+    "madge": "^5.0.1"
+  },
+  "peerDependencies": {
+    "rxjs": "^7.4.0"
+  },
+  "peerDependenciesMeta": {
+    "rxjs": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@cardano-ogmios/client": "6.3.0",
+    "@cardano-ogmios/schema": "6.3.0",
+    "@cardano-sdk/crypto": "workspace:~",
+    "@cardano-sdk/util": "workspace:~",
+    "@cardano-sdk/util-dev": "workspace:~",
+    "@foxglove/crc": "^0.0.3",
+    "@scure/base": "^1.1.1",
+    "fraction.js": "4.0.1",
+    "ip-address": "^9.0.5",
+    "lodash": "^4.17.21",
+    "ts-custom-error": "^3.2.0",
+    "ts-log": "^2.2.4",
+    "web-encoding": "^1.1.5"
+  },
+  "files": [
+    "dist/*",
+    "!dist/tsconfig.tsbuildinfo",
+    "LICENSE",
+    "NOTICE"
+  ]
+}

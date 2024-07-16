@@ -1,0 +1,60 @@
+{
+  "name": "@cardano-sdk/hardware-trezor",
+  "version": "0.4.33",
+  "description": "Mappings and integration with Trezor hardware",
+  "engines": {
+    "node": ">=16.20.1"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
+  "repository": "https://github.com/input-output-hk/cardano-js-sdk",
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false,
+  "license": "Apache-2.0",
+  "scripts": {
+    "circular-deps:check": "madge --circular dist/cjs",
+    "tscNoEmit": "echo typescript --noEmit command not implemented yet",
+    "cleanup:dist": "rm -rf dist",
+    "cleanup:nm": "rm -rf node_modules",
+    "cleanup": "rm -rf dist node_modules",
+    "lint": "eslint -c ../../complete.eslintrc.js \"src/**/*.ts\" \"test/**/*.ts\"",
+    "lint:fix": "yarn lint --fix",
+    "test": "jest -c test/jest.config.js",
+    "test:build:verify": "tsc --build ./test",
+    "test:e2e": "echo 'test:e2e' command not implemented yet",
+    "prepare": "tshy",
+    "coverage": "yarn test --coverage || true",
+    "prepack": "yarn build"
+  },
+  "devDependencies": {
+    "madge": "^5.0.1",
+    "ts-log": "2.2.4"
+  },
+  "dependencies": {
+    "@cardano-sdk/core": "workspace:~",
+    "@cardano-sdk/crypto": "workspace:~",
+    "@cardano-sdk/key-management": "workspace:~",
+    "@cardano-sdk/tx-construction": "workspace:~",
+    "@cardano-sdk/util": "workspace:~",
+    "@trezor/connect": "9.1.6",
+    "@trezor/connect-web": "9.1.6",
+    "lodash": "^4.17.21",
+    "ts-custom-error": "^3.2.0",
+    "ts-log": "^2.2.4",
+    "tslib": "^2.6.3"
+  },
+  "files": [
+    "dist/*",
+    "!dist/tsconfig.tsbuildinfo",
+    "LICENSE",
+    "NOTICE"
+  ]
+}
